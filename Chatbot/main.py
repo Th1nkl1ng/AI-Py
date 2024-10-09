@@ -6,7 +6,7 @@ from chatterbot.trainers import ListTrainer
 chatbot = ChatBot('Chatty')
 
 #New Trainer instanse
-trainer = ChatterBotCorpusTrainer(chatbot)
+trainer = ListTrainer(chatbot)
 
 '''
 #Train unsing English corpus
@@ -27,7 +27,7 @@ train_list = [
 ]
 
 #Train the chatbot with the coversation list
-trainer.train(*train_list)
+trainer.train(train_list)
 
 #Get a response from the chatbot
 response1 = chatbot.get_response("How are you?")
